@@ -1,131 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <title>CeebSync</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #eef1f5;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    :root {
+      --bg:#eef1f5; --ink:#333; --header:#2c3e50; --headline:#1d3557;
+      --accent:#457b9d; --light:#8ecae6; --card:#fff;
     }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:'Segoe UI',system-ui,Roboto,Arial,sans-serif;
+      background:var(--bg); color:var(--ink); min-height:100vh; display:flex; flex-direction:column;
     }
-    header img {
-      height: 60px;
-      margin-bottom: 0.5rem;
+    header{
+      background:var(--header); color:#fff; padding:1.5rem 2rem;
+      display:flex; flex-direction:column; align-items:center; text-align:center;
     }
-    .slogan {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #8ecae6;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
-      background-color: #ffffff;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #1d3557;
-    }
-    p {
-      font-size: 1.25rem;
-      color: #555;
-      max-width: 700px;
-    }
-    .cta {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      background-color: #457b9d;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-	.highlight {
-	  background-color: #f1f1f1;
-	  padding: 3rem 2rem;
-	  text-align: center;
-	}
-	.highlight h2 {
-	  color: #1d3557;
-	}
-	p {
-	  font-size: 1.25rem;
-	  color: #555;
-	  max-width: 700px;
-	  margin: 0 auto; /* ← center horizontally */
-	}
+    header img{ height:60px; margin-bottom:.5rem }
+    .slogan{ font-size:1.5rem; font-weight:700; color:var(--light) }
 
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+    main{
+      flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:4rem 2rem; background:var(--card); text-align:center;
     }
+    h1{ font-size:2.5rem; margin:.2rem 0 .6rem; color:var(--headline) }
+    p.lede{ font-size:1.25rem; color:#555; max-width:700px; margin:0 auto }
+
+    <style>
+	.cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:16px;
+    }
+    .cta-btn{
+      display:inline-block;
+      text-decoration:none;
+      background:#1d3557;
+      color:#fff;
+      padding:.85rem 1.5rem;
+      border-radius:8px;
+      font-weight:600;
+    }
+	</style>
+
+    .highlight{
+      background:#f1f1f1; padding:3rem 2rem; text-align:center;
+    }
+    .highlight h2{ color:var(--headline); margin-top:0 }
+    .highlight p{ font-size:1.15rem; color:#555; max-width:700px; margin:0 auto }
+
+    footer{ background:var(--header); color:#fff; text-align:center; padding:1rem }
   </style>
 </head>
 <body>
   <header>
-    <img src="LogoCeebSync.png" alt="CeebSync Logo">
+    <img src="LogoCeebSync.png" alt="CeebSync Logo" />
     <div class="slogan">Simplify. Sync. Scale.</div>
   </header>
+
   <main>
     <h1>Welcome to CeebSync!</h1>
-    <p>Your home for smart syncing solutions.</p>
-	<a href="https://kindness.ceebsync.com" style="
-	  display:inline-block;
-	  margin-top:12px;
-	  text-decoration:none;
-	  background:#1d3557;
-	  color:#fff;
-	  padding:0.85rem 1.5rem;
-	  border-radius:8px;
-	  font-weight:600;
-	">
-	  Slack Kindness Challenge
-	</a>
-	<a href="https://https://courtneylanier.github.io/Grocery" style="
-	  display:inline-block;
-	  margin-top:12px;
-	  text-decoration:none;
-	  background:#1d3557;
-	  color:#fff;
-	  padding:0.85rem 1.5rem;
-	  border-radius:8px;
-	  font-weight:600;
-	">
-	  Grocery List
-	</a>
+    <p class="lede">Your home for smart syncing solutions.</p>
+
+    <a class="cta-btn" href="https://kindness.ceebsync.com" target="_blank" rel="noopener">Slack Kindness Challenge</a>
+    <a class="cta-btn" href="https://courtneylanier.github.io/Grocery/" target="_blank" rel="noopener">Grocery List</a>
   </main>
-  <div class="highlight">
+
+  <section class="highlight">
     <h2>Everything in One Place</h2>
     <p>I enjoy crafting simple, thoughtful solutions. When a tool I make might bless someone else, I post it here so you can use it too.</p>
-  </div>
+  </section>
+
   <footer>
-    &copy; 2025 CeebSync. All rights reserved.
+    &copy; <span id="y"></span> CeebSync. All rights reserved.
   </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
