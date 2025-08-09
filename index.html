@@ -8,9 +8,10 @@
   <style>
     :root {
       --bg:#eef1f5; --ink:#333; --header:#2c3e50; --headline:#1d3557;
-      --accent:#457b9d; --light:#8ecae6; --card:#fff;
+      --accent:#457b9d; --light:#8ecae6; --card:#fff; --muted:#555;
+      --border:#e6e6e6;
     }
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box }
     body{
       margin:0; font-family:'Segoe UI',system-ui,Roboto,Arial,sans-serif;
       background:var(--bg); color:var(--ink); min-height:100vh; display:flex; flex-direction:column;
@@ -27,32 +28,21 @@
       padding:4rem 2rem; background:var(--card); text-align:center;
     }
     h1{ font-size:2.5rem; margin:.2rem 0 .6rem; color:var(--headline) }
-    p.lede{ font-size:1.25rem; color:#555; max-width:700px; margin:0 auto }
+    .lede{ font-size:1.25rem; color:var(--muted); max-width:700px; margin:0 auto }
 
-    <style>
-	.cta-row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:16px;
+    .cta-row{
+      display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:16px;
     }
     .cta-btn{
-      display:inline-block;
-      text-decoration:none;
-      background:#1d3557;
-      color:#fff;
-      padding:.85rem 1.5rem;
-      border-radius:8px;
-      font-weight:600;
+      display:inline-block; text-decoration:none; background:var(--headline); color:#fff;
+      padding:.85rem 1.5rem; border-radius:8px; font-weight:600;
     }
-	</style>
 
     .highlight{
-      background:#f1f1f1; padding:3rem 2rem; text-align:center;
+      background:#f1f1f1; padding:3rem 2rem; text-align:center; border-top:1px solid var(--border);
     }
     .highlight h2{ color:var(--headline); margin-top:0 }
-    .highlight p{ font-size:1.15rem; color:#555; max-width:700px; margin:0 auto }
+    .highlight p{ font-size:1.15rem; color:var(--muted); max-width:700px; margin:0 auto }
 
     footer{ background:var(--header); color:#fff; text-align:center; padding:1rem }
   </style>
@@ -67,8 +57,14 @@
     <h1>Welcome to CeebSync!</h1>
     <p class="lede">Your home for smart syncing solutions.</p>
 
-    <a class="cta-btn" href="https://kindness.ceebsync.com" target="_blank" rel="noopener">Slack Kindness Challenge</a>
-    <a class="cta-btn" href="https://courtneylanier.github.io/Grocery/" target="_blank" rel="noopener">Grocery List</a>
+    <div class="cta-row">
+      <a class="cta-btn" href="https://kindness.ceebsync.com" target="_blank" rel="noopener">
+        Slack Kindness Challenge
+      </a>
+      <a class="cta-btn" href="https://courtneylanier.github.io/Grocery/" target="_blank" rel="noopener">
+        Grocery List
+      </a>
+    </div>
   </main>
 
   <section class="highlight">
