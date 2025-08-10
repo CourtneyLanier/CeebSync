@@ -3,8 +3,8 @@
   "short_name": "CeebSync",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#C3D6A0",
-  "theme_color": "#C3D6A0",
+  "background_color": "#1E88E5",
+  "theme_color": "#1E88E5",
   "icons": [
     {
       "src": "/icons/icon-192.png",
